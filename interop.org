@@ -1,0 +1,175 @@
+* JNI signatures
+** datomic.Database
+## javap -classpath /Users/ffailla/.m2/repository/com/datomic/datomic-free/0.8.3646/datomic-free-0.8.3646.jar -s datomic.Database
+## Compiled from "Database.java"
+## public interface datomic.Database{
+## public static final java.lang.Object EAVT;
+##   Signature: Ljava/lang/Object;
+## public static final java.lang.Object AEVT;
+##   Signature: Ljava/lang/Object;
+## public static final java.lang.Object AVET;
+##   Signature: Ljava/lang/Object;
+## public static final java.lang.Object VAET;
+##   Signature: Ljava/lang/Object;
+## public abstract java.lang.String id();
+##   Signature: ()Ljava/lang/String;
+## public abstract long basisT();
+##   Signature: ()J
+## public abstract long nextT();
+##   Signature: ()J
+## public abstract java.lang.Long asOfT();
+##   Signature: ()Ljava/lang/Long;
+## public abstract java.lang.Long sinceT();
+##   Signature: ()Ljava/lang/Long;
+## public abstract boolean isHistory();
+##   Signature: ()Z
+## public abstract java.util.Map with(java.util.List);
+##   Signature: (Ljava/util/List;)Ljava/util/Map;
+## public abstract datomic.Database asOf(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ldatomic/Database;
+## public abstract datomic.Database since(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ldatomic/Database;
+## public abstract datomic.Database history();
+##   Signature: ()Ldatomic/Database;
+## public abstract datomic.Database filter(datomic.Database$Predicate);
+##   Signature: (Ldatomic/Database$Predicate;)Ldatomic/Database;
+## public abstract datomic.Database filter(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ldatomic/Database;
+## public abstract boolean isFiltered();
+##   Signature: ()Z
+## public abstract datomic.Entity entity(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ldatomic/Entity;
+## public abstract java.lang.Object ident(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ljava/lang/Object;
+## public abstract java.lang.Object entid(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ljava/lang/Object;
+## public abstract java.lang.Object invoke(java.lang.Object, java.lang.Object[]);
+##   Signature: (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+## public abstract java.lang.Iterable datoms(java.lang.Object, java.lang.Object[]);
+##   Signature: (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Iterable;
+## public abstract java.lang.Iterable indexRange(java.lang.Object, java.lang.Object, java.lang.Object);
+##   Signature: (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Iterable;
+## static {};
+##   Signature: ()V
+## }
+** datomic.Peer
+## javap -classpath /Users/ffailla/.m2/repository/com/datomic/datomic-free/0.8.3646/datomic-free-0.8.3646.jar -s datomic.Peer
+## Compiled from "Peer.java"
+## public class datomic.Peer extends java.lang.Object{
+## public datomic.Peer();
+##   Signature: ()V
+## public static datomic.Connection connect(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ldatomic/Connection;
+## public static boolean createDatabase(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Z
+## public static boolean renameDatabase(java.lang.Object, java.lang.String);
+##   Signature: (Ljava/lang/Object;Ljava/lang/String;)Z
+## public static boolean deleteDatabase(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Z
+## public static java.util.UUID squuid();
+##   Signature: ()Ljava/util/UUID;
+## public static long squuidTimeMillis(java.util.UUID);
+##   Signature: (Ljava/util/UUID;)J
+## public static java.lang.Object tempid(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ljava/lang/Object;
+## public static java.lang.Object tempid(java.lang.Object, long);
+##   Signature: (Ljava/lang/Object;J)Ljava/lang/Object;
+## public static long toT(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)J
+## public static java.lang.Object toTx(long);
+##   Signature: (J)Ljava/lang/Object;
+## public static java.lang.Object part(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ljava/lang/Object;
+## public static java.util.Collection q(java.lang.Object, java.lang.Object[]);
+##   Signature: (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/util/Collection;
+## public static datomic.functions.Fn function(java.util.Map);
+##   Signature: (Ljava/util/Map;)Ldatomic/functions/Fn;
+## public static java.lang.Object resolveTempid(datomic.Database, java.lang.Object, java.lang.Object);
+##   Signature: (Ldatomic/Database;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+## static {};
+##   Signature: ()V
+## }
+
+** datomic.Util
+## javap -classpath /Users/ffailla/.m2/repository/com/datomic/datomic-free/0.8.3646/datomic-free-0.8.3646.jar -s datomic.Util
+## Compiled from "Util.java"
+## public final class datomic.Util extends java.lang.Object{
+## public datomic.Util();
+##   Signature: ()V
+## public static java.lang.String name(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ljava/lang/String;
+## public static java.lang.String namespace(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ljava/lang/String;
+## public static java.util.List list(java.lang.Object[]);
+##   Signature: ([Ljava/lang/Object;)Ljava/util/List;
+## public static java.util.Map map(java.lang.Object[]);
+##   Signature: ([Ljava/lang/Object;)Ljava/util/Map;
+## public static java.lang.Object read(java.lang.String);
+##   Signature: (Ljava/lang/String;)Ljava/lang/Object;
+## public static java.util.List readAll(java.io.Reader);
+##   Signature: (Ljava/io/Reader;)Ljava/util/List;
+## static {};
+##   Signature: ()V
+## }
+
+** datomic.Entity
+## javap -classpath /Users/ffailla/.m2/repository/com/datomic/datomic-free/0.8.3646/datomic-free-0.8.3646.jar -s datomic.Entity
+## Compiled from "Entity.java"
+## public interface datomic.Entity{
+## public abstract java.lang.Object get(java.lang.Object);
+##   Signature: (Ljava/lang/Object;)Ljava/lang/Object;
+## public abstract datomic.Entity touch();
+##   Signature: ()Ldatomic/Entity;
+## public abstract java.util.Set keySet();
+##   Signature: ()Ljava/util/Set;
+## public abstract datomic.Database db();
+##   Signature: ()Ldatomic/Database;
+## }
+
+** datomic.Connection
+## javap -classpath /Users/ffailla/.m2/repository/com/datomic/datomic-free/0.8.3646/datomic-free-0.8.3646.jar -s datomic.Connection
+## Compiled from "Connection.java"
+## public interface datomic.Connection{
+## public static final java.lang.Object DB_BEFORE;
+##   Signature: Ljava/lang/Object;
+## public static final java.lang.Object DB_AFTER;
+##   Signature: Ljava/lang/Object;
+## public static final java.lang.Object TX_DATA;
+##   Signature: Ljava/lang/Object;
+## public static final java.lang.Object TEMPIDS;
+##   Signature: Ljava/lang/Object;
+## public abstract boolean requestIndex();
+##   Signature: ()Z
+## public abstract datomic.Database db();
+##   Signature: ()Ldatomic/Database;
+## public abstract datomic.ListenableFuture transact(java.util.List);
+##   Signature: (Ljava/util/List;)Ldatomic/ListenableFuture;
+## public abstract datomic.ListenableFuture transactAsync(java.util.List);
+##   Signature: (Ljava/util/List;)Ldatomic/ListenableFuture;
+## public abstract java.util.concurrent.BlockingQueue txReportQueue();
+##   Signature: ()Ljava/util/concurrent/BlockingQueue;
+## public abstract void removeTxReportQueue();
+##   Signature: ()V
+## public abstract void gcStorage(java.util.Date);
+##   Signature: (Ljava/util/Date;)V
+## static {};
+##   Signature: ()V
+## }
+
+** datomic.Datom
+javap -classpath /Users/ffailla/.m2/repository/com/datomic/datomic-free/0.8.3646/datomic-free-0.8.3646.jar -s datomic.Datom
+Compiled from "Datom.java"
+public interface datomic.Datom{
+public abstract java.lang.Object e();
+  Signature: ()Ljava/lang/Object;
+public abstract java.lang.Object a();
+  Signature: ()Ljava/lang/Object;
+public abstract java.lang.Object v();
+  Signature: ()Ljava/lang/Object;
+public abstract java.lang.Object tx();
+  Signature: ()Ljava/lang/Object;
+public abstract boolean added();
+  Signature: ()Z
+public abstract java.lang.Object get(int);
+  Signature: (I)Ljava/lang/Object;
+}
